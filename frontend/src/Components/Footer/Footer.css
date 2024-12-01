@@ -1,0 +1,32 @@
+/* Footer.css */
+.footer-container {
+ 
+  bottom: 0;
+  width: 100%;
+  background-color:#675D50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      padding: 10px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+  }
+  

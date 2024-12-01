@@ -1,0 +1,326 @@
+.carousel {
+    width: 70%;
+    margin: 20px auto;
+    margin-top: 5rem;
+  }
+  
+  
+  .carousel-item {
+    height: 400px;
+  }
+  
+
+  .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+ 
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    bottom: 50px;
+    left: 50px;
+    text-align: left;
+  }
+  
+  
+  .carousel-caption h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .carousel-caption p {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  
+  .card-modern {
+    height: 50%;
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-modern:hover {
+    transform: scale(1.05); 
+  }
+
+
+
+
+
+ /*SERVICE CARD STYLING ....................................................... */
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 700px; 
+    background:linear-gradient(0deg, rgba(201,241,201,1) 0%, rgba(255,255,255,1) 100%);
+    margin-top: 10rem;
+  }
+  
+  .service-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .service-card {
+    position: relative;
+    background: #333;
+    width: 250px;
+    height: 320px;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #aaa;
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2),
+      0 0 1rem rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .service-card__image-container {
+    margin: -2rem -2rem 1rem -2rem;
+  }
+  
+  .service-card__line {
+    opacity: 0;
+    animation: LineFadeIn .8s .8s forwards ease-in;
+  }
+  
+  .card__image {
+    opacity: 0;
+    animation: ImageFadeIn .8s 1.4s forwards;
+  }
+  
+  .service-card__title {
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+  
+  .service-card__content {
+    margin-top: -1rem;
+    opacity: 0;
+    animation: ContentFadeIn .8s 1.6s forwards;
+  }
+  
+  .service-card__svg {
+    position: absolute;
+    left: 0;
+    top: 115px;
+  }
+  
+  @keyframes LineFadeIn {
+    0% {
+      opacity: 0;
+      d: path("M 0 300 Q 0 300 0 300 Q 0 300 0 300 C 0 300 0 300 0 300 Q 0 300 0 300 ");
+      stroke: #fff;
+    }
+  
+    50% {
+      opacity: 1;
+      d: path("M 0 300 Q 50 300 100 300 Q 250 300 350 300 C 350 300 500 300 650 300 Q 750 300 800 300");
+      stroke: #888BFF;
+    }
+  
+    100% {
+      opacity: 1;
+      d: path("M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400");
+      stroke: #545581;
+    }
+  }
+  
+  @keyframes ContentFadeIn {
+    0% {
+      transform: translateY(-1rem);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  /* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+
+  .carousel {
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 3rem;
+  }
+
+  .carousel-item,
+  .carousel-item img {
+    height: auto;
+  }
+
+  .carousel-caption {
+    padding: 10px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .card-modern {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .service-container {
+    height: auto;
+    margin-top: 5rem;
+    padding: 20px;
+  }
+
+  .service-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .service-card__image-container {
+    margin: -1rem -1rem 0 -1rem;
+  }
+
+  .service-card__title {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .service-card__content {
+    margin-top: -1rem;
+  }
+
+  .service-card__svg {
+    top: 80px;
+  }
+
+  .pharmacy-welcome {
+    padding: 20px;
+    border-radius: 0;
+    margin: 10px auto;
+    max-width: 100%;
+  }
+
+  .pharmacy-welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation-delay: 0.3s;
+  }
+
+  .pharmacy-welcome p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeInUpText {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+  @keyframes ImageFadeIn {
+    0% {
+      transform: translate(-.5rem, -.5rem) scale(1.05);
+      opacity: 0;
+      filter: blur(2px);
+    }
+  
+    50% {
+      opacity: 1;
+      filter: blur(2px);
+    }
+  
+    100% {
+      transform: translateY(0) scale(1.0);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+
+.pharmacy-welcome {
+  padding: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pharmacy-welcome h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpText 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pharmacy-welcome p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpText 1s ease forwards;
+  animation-delay: 1s;
+}
